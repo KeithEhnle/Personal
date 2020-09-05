@@ -1,0 +1,92 @@
+---
+title: "HW - Week 2"
+author: "Keith Ehnle"
+date: "9/3/2020"
+output: pdf_document
+---
+
+# 2(a)
+---
+Solving Equations
+```{r}
+"2x+5y=33"
+"x+3y=19" 
+```
+
+Put the unknown variables of a equation into a vector. Vector correlated to equation is directly beneath the equation. Make sure that the x's and the y's are aligned in the martix.
+```{r}
+"2x+5y=33"
+A<-c(2, 5)
+
+"x+3y=19" 
+B<-c(1, 3)
+```
+
+Combine the two vectors into a single matrix
+```{r}
+C<- rbind(A,B)
+```
+
+Put the answer to the equations into a matrix as well by making a vector first. Make sure the answers will be in the same line as equation it came from. 
+```{r}
+D<-c(33,19)
+E<-matrix(D)
+```
+
+Use the solve function to solve the equations. Since the x's were first then the y's the first output will be the x value, and the seconf output will be the y output. 
+```{r}
+solve(C,D)
+```
+
+## 2(b)
+---
+Finding the mean withou the mean function.
+```{r}
+F<-(1:100)
+G<- sum(F)
+H<-length(F)
+G/H
+
+```
+
+## 2(c)
+---
+Install "dplyr" package.
+```{r}
+install.packages("dplyr")
+```
+
+#3
+---
+Make a data frame of first 8 letters in the alphabet in 2 rows and 4 columns. 
+```{r}
+I<- data.frame(c("A", "E"), 
+               c("B", "F"),
+               c("C", "G"),
+               c("D", "H"))
+```
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
