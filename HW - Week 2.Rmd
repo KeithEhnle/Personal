@@ -36,17 +36,20 @@ E<-matrix(D)
 Use the solve function to solve the equations. Since the x's were first then the y's the first output will be the x value, and the seconf output will be the y output. 
 ```{r}
 solve(C,D)
+"x=4" "y=4"
 ```
+
+
 
 ## 2(b)
 ---
-Finding the mean withou the mean function.
+Finding the mean without the mean function.
 ```{r}
 F<-(1:100)
 G<- sum(F)
 H<-length(F)
 G/H
-
+"50.5"
 ```
 
 ## 2(c)
@@ -60,7 +63,7 @@ install.packages("dplyr")
 ---
 Make a data frame of first 8 letters in the alphabet in 2 rows and 4 columns. 
 ```{r}
-I<- data.frame(c("A", "E"), 
+data.frame(c("A", "E"), 
                c("B", "F"),
                c("C", "G"),
                c("D", "H"))
