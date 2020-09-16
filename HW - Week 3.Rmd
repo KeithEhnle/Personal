@@ -1,0 +1,76 @@
+---
+title: "HW - Week 3"
+author: "Keith Ehnle"
+date: "9/14/2020"
+output: pdf_document
+---
+
+
+Homework 3
+#1
+```{r}
+mean <- function(datainput) {
+  J <- sum(numbers)
+  K <- length(numbers)
+  L<- J/K
+  return(L)
+}
+  
+```
+
+#2
+```{r}
+install.packages(tidytuesdayR)
+
+tuesdata <- tidytuesdayR::tt_load('2020-09-01')
+tuesdata <- tidytuesdayR::tt_load(2020, week = 36)
+
+key_crop_yields <- tuesdata$key_crop_yields
+
+M<-key_crop_yields[,3]
+
+range(M)
+
+"1961" 
+"2018"
+```
+
+#3
+```{r}
+N<-key_crop_yields[,6]
+O<- N[!is.na(N)]
+P<-mean(O)
+"3.0245"
+```
+
+
+#4
+```{r}
+Q <- key_crop_yields[,1]
+write.table(Q,file = "Entity")
+```
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
