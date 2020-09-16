@@ -72,48 +72,6 @@ data.frame(c("A", "E"),
 ```
 
 
-Homework 3
-#1
-```{r}
-I<- (1:100)
-mean <- function(F) {
-  J <- sum(F)
-  K <- length(F)
-  J/K
-}
-  
-```
-
-#2
-```{r}
-install.packages(tidytuesdayR)
-
-tuesdata <- tidytuesdayR::tt_load('2020-09-01')
-tuesdata <- tidytuesdayR::tt_load(2020, week = 36)
-
-key_crop_yields <- tuesdata$key_crop_yields
-
-L<-key_crop_yields[,3]
-
-range(L)
-
-"1961" 
-"2018"
-```
-
-#3
-```{r}
-M<-key_crop_yields[,6]
-mean(M){options(na.rm)}
-```
-
-
-#4
-```{r}
-"#4" <- key_crop_yields[,1]
-```
-
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
